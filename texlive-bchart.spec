@@ -23,16 +23,8 @@ The package provides horizontal bar charts, drawn using TikZ on
 a numeric X-axis. The focus of the package is simplicity and
 aesthetics.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -46,7 +38,6 @@ aesthetics.
 %doc %{_texmfdistdir}/doc/latex/bchart/README
 %doc %{_texmfdistdir}/doc/latex/bchart/bchart.pdf
 %doc %{_texmfdistdir}/doc/latex/bchart/bchart.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,5 +48,3 @@ aesthetics.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
