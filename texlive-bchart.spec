@@ -1,16 +1,16 @@
-# revision 24637
+# revision 25677
 # category Package
 # catalog-ctan /macros/latex/contrib/bchart
-# catalog-date 2011-11-22 15:15:08 +0100
-# catalog-license noinfo
-# catalog-version 0.1.0
+# catalog-date 2012-03-17 17:05:04 +0100
+# catalog-license other-free
+# catalog-version 0.1.1
 Name:		texlive-bchart
-Version:	0.1.0
-Release:	2
+Version:	0.1.1
+Release:	1
 Summary:	Draw simple bar charts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bchart
-License:	NOINFO
+License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.doc.tar.xz
 BuildArch:	noarch
@@ -34,6 +34,7 @@ aesthetics.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/bchart/bchart.sty
+%doc %{_texmfdistdir}/doc/latex/bchart/CHANGES.txt
 %doc %{_texmfdistdir}/doc/latex/bchart/LICENSE.txt
 %doc %{_texmfdistdir}/doc/latex/bchart/README
 %doc %{_texmfdistdir}/doc/latex/bchart/bchart.pdf
