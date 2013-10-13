@@ -1,11 +1,11 @@
-# revision 25677
+# revision 27496
 # category Package
 # catalog-ctan /macros/latex/contrib/bchart
-# catalog-date 2012-03-17 17:05:04 +0100
+# catalog-date 2012-08-22 15:50:28 +0200
 # catalog-license other-free
-# catalog-version 0.1.1
+# catalog-version 0.1.2
 Name:		texlive-bchart
-Version:	0.1.1
+Version:	0.1.2
 Release:	1
 Summary:	Draw simple bar charts in LaTeX
 Group:		Publishing
@@ -49,19 +49,3 @@ aesthetics.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1.1-1
-+ Revision: 787566
-- Update to latest release.
-
-* Thu Mar 22 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1.0-2
-+ Revision: 786151
-- Rebuild to no longer install tlpobj files.
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1.0-1
-+ Revision: 739581
-- texlive-bchart
-- texlive-bchart
-
