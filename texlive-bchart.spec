@@ -6,7 +6,7 @@
 # catalog-version 0.1.2
 Name:		texlive-bchart
 Version:	0.1.2
-Release:	4
+Release:	5
 Summary:	Draw simple bar charts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bchart
