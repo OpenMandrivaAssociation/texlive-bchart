@@ -1,12 +1,12 @@
 Name:		texlive-bchart
-Version:	0.1.3
-Release:	2
+Version:	43928
+Release:	1
 Summary:	Draw simple bar charts in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bchart
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.r43928.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.doc.r43928.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -18,12 +18,12 @@ a numeric X-axis. The focus of the package is simplicity and
 aesthetics.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -32,7 +32,7 @@ aesthetics.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
