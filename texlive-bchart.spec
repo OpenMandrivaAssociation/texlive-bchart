@@ -3,7 +3,7 @@ Version:	43928
 Release:	2
 Summary:	Draw simple bar charts in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bchart
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/bchart
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.doc.r%{version}.tar.xz
