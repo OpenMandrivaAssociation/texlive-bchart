@@ -1,41 +1,23 @@
-Name:		texlive-bchart
-Version:	43928
-Release:	2
+%global tl_name bchart
+%global tl_revision 79461
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.1.3
+Release:	%{tl_revision}.1
 Summary:	Draw simple bar charts in LaTeX
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/bchart
-License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.doc.r%{version}.tar.xz
+License:	mit
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bchart.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides horizontal bar charts, drawn using TikZ on
-a numeric X-axis. The focus of the package is simplicity and
-aesthetics.
+The package provides horizontal bar charts, drawn using TikZ on a
+numeric X-axis. The focus of the package is simplicity and aesthetics.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/bchart
-%doc %{_texmfdistdir}/doc/latex/bchart
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
